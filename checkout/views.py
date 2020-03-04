@@ -8,6 +8,7 @@ from django.utils import timezone
 from products.models import Product
 import stripe
 
+
 # Create your views here.
 
 stripe.api_key = settings.STRIPE_SECRET
@@ -59,5 +60,3 @@ def checkout(request):
         order_form = OrderForm()
         
     return render(request, "checkout.html", {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
-                
-            
