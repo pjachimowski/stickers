@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/pjachimowski/pj-stickers.svg?branch=master)](https://travis-ci.com/pjachimowski/pj-stickers)
 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
 Welcome pjachimowski,
