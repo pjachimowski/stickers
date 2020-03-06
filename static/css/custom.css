@@ -64,3 +64,19 @@ caption p {
 .product-description {
     min-height: 40px;
 }
+
+/*------- footer ---------------*/
+
+.footer {
+    background-image: linear-gradient(to bottom right, rgb(54, 128, 52), rgb(27, 110, 66));
+}
+
+.copyright {
+    font-size: xx-small;
+}
+
+.pj {
+    background-color: rgb(126, 0, 0);
+    color: red;
+    
+}
