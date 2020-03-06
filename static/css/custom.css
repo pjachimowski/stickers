@@ -3,6 +3,22 @@ body {
     padding-top: 100px;
 }
 
+/*-----------------background gradient ------------------*/
+
+.colorful {
+  background:
+    -webkit-linear-gradient(315deg, hsla(314.4, 100%, 31.4%, 1) 0%, hsla(314.4, 100%, 31.4%, 0) 70%),
+    -webkit-linear-gradient(65deg, hsla(284.91, 89.99%, 50%, 1) 10%, hsla(284.91, 89.99%, 50%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(225, 56.15%, 27.82%, 1) 15%, hsla(225, 56.15%, 27.82%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(289.36, 100%, 12.45%, 1) 100%, hsla(289.36, 100%, 12.45%, 0) 70%);
+  background:
+    linear-gradient(135deg, hsla(314.4, 100%, 31.4%, 1) 0%, hsla(314.4, 100%, 31.4%, 0) 70%),
+    linear-gradient(25deg, hsla(284.91, 89.99%, 50%, 1) 10%, hsla(284.91, 89.99%, 50%, 0) 80%),
+    linear-gradient(315deg, hsla(225, 56.15%, 27.82%, 1) 15%, hsla(225, 56.15%, 27.82%, 0) 80%),
+    linear-gradient(245deg, hsla(289.36, 100%, 12.45%, 1) 100%, hsla(289.36, 100%, 12.45%, 0) 70%);
+  }
+  /*-----------------background gradient ------------------*/
+
 footer {
     margin-top: 40px;
     padding-top: 20px;
@@ -78,5 +94,5 @@ caption p {
 .pj {
     background-color: rgb(126, 0, 0);
     color: red;
-    
+
 }
