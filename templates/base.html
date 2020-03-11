@@ -34,10 +34,12 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					{% if user.is_authenticated %}
+                    <li><a href="{% url 'shop' %}" class="btn-1"> Shop</a></li>
                     <li><a href="{% url 'about' %}" class="btn-1"> About</a></li>
 					<li><a href="{% url 'profile' %}" class="btn-1"> Profile</a></li>
 					<li><a href="{% url 'logout' %}" class="btn-1"> Log Out</a></li>
 					{%  else %}
+                    <li><a href="{% url 'shop' %}" class="btn-1"> Shop</a></li>
                     <li><a href="{% url 'about' %}" class="btn-1"> About</a></li>
 					<li><a href="{% url 'register' %}" class="btn-1"> Register</a></li>
 					<li><a href="{% url 'login' %}" class="btn-1"> Log In</a></li>
@@ -64,7 +66,7 @@
 		</div>
 	</div>
 	{% endif %}
-<!----------------------- search & content (TO BE SEPARATED) ----------------------->
+<!----------------------- content ----------------------->
 
     {% block content %} {% endblock %}
 

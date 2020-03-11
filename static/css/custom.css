@@ -4,6 +4,13 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     padding-top: 100px;
+    position: relative;
+    margin: 0;
+    min-height: 100%;  
+}
+
+html {
+  height: 100%;
 }
 
 .background-gradient {
@@ -63,20 +70,23 @@ body {
 }
 
 .btn-2 {
-    height: 52px;
+    height: 30px;
     width: 90px;
     font-size: small;
     text-align: center;
     border-radius: 20px;
-    border: 1px solid rgb(175, 0, 175);
-    color: rgb(175, 0, 175);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     padding: 5px;
     margin: 15px;
     transition: 0.3s;
 }
 .btn-2:hover {
-  color: rgb(56, 56, 56);
-  border: 1px solid rgb(56, 56, 56);
+  color: rgb(175, 0, 175);
+  border: 1px solid rgb(175, 0, 175);
+  background-color: rgb(255, 255, 255);
 }
 
 .btn-3 {
@@ -111,7 +121,7 @@ body {
 
 /*------------------- ABOUT ------------------*/
 
-.slogan {
+.page-title {
     text-transform: uppercase;
     font-weight: 700;
     margin-right: 70px;
@@ -177,7 +187,31 @@ body {
     margin: 20px 0px 0px 0px;
     }
 }
-/*-----------------footer------------------*/
+
+/*----------------- login ------------------*/
+
+.links {
+    color: #ffffff;
+}
+.links:hover {
+    color: rgb(175, 0, 175);
+    text-decoration: none;
+}
+
+/*----------------- footer------------------*/
+
+#footer {
+    margin-top: 25px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
 
 .logo2 {
     background-position: center;
@@ -234,6 +268,7 @@ footer ul{
 
 /* .widget-title.text-center,.widget-title.text-center span::after {margin-left: auto;margin-right:auto;left: 0;right: 0;} */
 .typo-light,
+.typo-light h2, 
 .typo-light h1, 
 .typo-light h3, 
 .typo-light h5, 
@@ -267,6 +302,7 @@ ul.social-footer2 li a {display: block;	height:30px;width: 30px;text-align: cent
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
+    background-color: #c67605;
 }
 
 .label-warning[href],

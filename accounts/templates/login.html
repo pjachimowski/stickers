@@ -1,15 +1,21 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
-    <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
-        <fieldset class="form-group">
-            <legend>Login</legend>
-            {% csrf_token %}
-            {{ user_form | as_bootstrap }}
-            
-             <p><a href="{% url 'password_reset' %}">Forgot my password</a></p>
-             
-            <button type="submit" class="btn btn-primary">Login</button>
-        </fieldset>
-    </form>
+<div class="container typo-light">
+    <div class="row">
+        <div class="col col-xs-12 col-md-4">
+            <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
+                <fieldset class="form-group">
+                    <h2 class="page-title">Login</h2>
+                    {% csrf_token %}
+                    {{ user_form | as_bootstrap }}
+                    
+                    <p class="links"><a href="{% url 'password_reset' %}">Forgot my password</a></p>
+                    
+                    <button type="submit" class="btn-4">Login</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
