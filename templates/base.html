@@ -1,17 +1,27 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ecommerce</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
+	<title>PJ-stickers</title>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}"> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}"> -->
 	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- emain js ---->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){ 
+            emailjs.init("user_W2HHhglT9IFemnktxvDFY");
+        })();
+    </script>
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	{% block head_js %}
 	{% endblock head_js %}
@@ -19,7 +29,7 @@
 
 <body class="background-gradient">
 
-<!-----------------------navbar ----------------------->
+	<!-----------------------navbar ----------------------->
 	<nav class="navbar-style navbar-masthead navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -34,13 +44,13 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					{% if user.is_authenticated %}
-                    <li><a href="{% url 'shop' %}" class="btn-1"> Shop</a></li>
-                    <li><a href="{% url 'about' %}" class="btn-1"> About</a></li>
+					<li><a href="{% url 'shop' %}" class="btn-1"> Shop</a></li>
+					<li><a href="{% url 'request_page' %}" class="btn-1"> Request</a></li>
 					<li><a href="{% url 'profile' %}" class="btn-1"> Profile</a></li>
 					<li><a href="{% url 'logout' %}" class="btn-1"> Log Out</a></li>
 					{%  else %}
-                    <li><a href="{% url 'shop' %}" class="btn-1"> Shop</a></li>
-                    <li><a href="{% url 'about' %}" class="btn-1"> About</a></li>
+					<li><a href="{% url 'shop' %}" class="btn-1"> Shop</a></li>
+					<li><a href="{% url 'request_page' %}" class="btn-1"> Request</a></li>
 					<li><a href="{% url 'register' %}" class="btn-1"> Register</a></li>
 					<li><a href="{% url 'login' %}" class="btn-1"> Log In</a></li>
 					{% endif %}
@@ -56,7 +66,7 @@
 			</div>
 		</div>
 	</nav>
-<!-----------------------message ----------------------->
+	<!-----------------------message ----------------------->
 	{% if messages %}
 	<div class="alert alert-success">
 		<div class="messages">
@@ -66,85 +76,83 @@
 		</div>
 	</div>
 	{% endif %}
-<!----------------------- content ----------------------->
+	<!----------------------- content ----------------------->
 
-    {% block content %} {% endblock %}
+	{% block content %} {% endblock %}
 
-<!----------------------- footer ----------------------->
-<footer id="footer">
-    <div class="main-footer typo-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="widget">
-                        <a href="/"><img class="logo2" src="/static/images/pj-stickers-pink.png" alt="logo"></a>
-                        <br/>
-                        <p>About the company, little discription will goes here.. </p>
-                    </div>
-                </div>
+	<!----------------------- footer ----------------------->
+	<footer id="footer">
+		<div class="main-footer typo-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="widget">
+							<a href="/"><img class="logo2" src="/static/images/pj-stickers-pink.png" alt="logo"></a>
+								<br/>
+								<p>Buy our eco-friendly, inspiring fun and smart stickers! Get your personalized design and stand out with your stickers? High quality print, free delivery in Amsterdam area and more. </p>
+						</div>
+					</div>
 
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="widget">
-                        <h5 class="widget-title">Quick Links</h5>
-                        <ul>
-                            <li>
-                                <div class=""><a href="#.">Get Started</a></div>	
-                            </li>
-                            <li>
-                                <div class=""><a href="#.">Top Leaders</a></div>	
-                            </li>
-                            <li>
-                                <div class=""><a href="#.">Success Stories</a></div>	
-                            </li>
-                            <li>
-                                <div class=""><a href="#.">Event/Tickets</a></div>	
-                            </li>
-                            <li>
-                                <div class=""><a href="#.">News</a></div>	
-                            </li>
-                            <li>
-                                <div class=""><a href="#.">Lifestyle</a></div>	
-                            </li>
-                            <li>
-                                <div class=""><a href="#.">About</a></div>	
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="widget">
+							<h5 class="widget-title">Quick Links</h5>
+							<ul>
+								<li>
+									<a href="{% url 'shop' %}">Shop</a>
+								</li>
+								<li>
+									<a href="{% url 'request_page' %}">Request</a>
+								</li>
+								<li>
+									<a href="{% url 'register' %}">Register</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="widget">
-                        <h5 class="widget-title">Get Started</h5>
-                        <p>Get access to your full Training and Marketing Suite.</p>
-                        <button  href="{% url 'register' %}" class="btn-2"> Register</button>
-                    </div>
-                </div>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="widget">
+							<h5 class="widget-title">Get Started</h5>
+							<p>Register to our portal for purchase history, additional discounts and more...</p><br>
+							<a  href="{% url 'register' %}" class="btn-5"> Register</a>
+						</div>
+					</div>
 
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="widget">
-                        <h5 class="widget-title">Contact</h5>
-                        <p><a href="mailto:p.jachimowski89@gmail.com" title="pj-stickers">p.jachimowski89@gmail.com</a></p>
-                        <ul class="social-footer2">
-                            <li><a target="_blank" href="https://www.facebook.com/patryk.jachimowski.73?ref=bookmarks"><i class="fab fa-facebook"> </i></a></li>
-                            <li><a target="_blank" href="https://www.linkedin.com/in/patryk-jachimowski/"><i class="fab fa-linkedin"> </i></a></li>
-                            <li><a target="_blank" href="https://github.com/pjachimowski"><i class="fab fa-github"> </i></a></li>
-                            <li><a target="_blank" href="https://dribbble.com/Jachimowski"><i class="fab fa-dribbble"> </i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>© 2020 Copyright: Patryk Jachimowski. Project created for academic purposes only. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<div class="widget">
+							<h5 class="widget-title">Contact</h5>
+							<p><a href="mailto:p.jachimowski89@gmail.com"
+									title="pj-stickers">p.jachimowski89@gmail.com</a></p>
+							<ul class="social-footer2">
+								<li><a target="_blank"
+										href="https://www.facebook.com/patryk.jachimowski.73?ref=bookmarks"><i class="fab fa-facebook"> </i></a>
+								</li>
+								<li><a target="_blank"
+										href="https://www.linkedin.com/in/patryk-jachimowski/"><i class="fab fa-linkedin"> </i></a>
+								</li>
+								<li><a target="_blank"
+										href="https://github.com/pjachimowski"><i class="fab fa-github"> </i></a></li>
+								<li><a target="_blank"
+										href="https://dribbble.com/Jachimowski"><i class="fab fa-dribbble"> </i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p>© 2020 Copyright: Patryk Jachimowski. Project created for academic purposes only. All Rights
+							Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
 
 </body>
 

@@ -25,7 +25,7 @@ from products.views import all_products
 # from shop.views import all_products
 from django.views import static
 from .settings import MEDIA_ROOT
-from about import urls as urls_about
+from request_page import urls as urls_request_page
 from shop import urls as urls_shop
 
 urlpatterns = [
@@ -36,7 +36,7 @@ urlpatterns = [
     url(r'^cart/', include(urls_cart)),
     url(r'^search/', include(urls_search)),
     url(r'^checkout/', include(urls_checkout)),
-    url(r'^about/', include(urls_about)),
+    url(r'^request_page/', include(urls_request_page)),
     url(r'^shop/', include(urls_shop)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]

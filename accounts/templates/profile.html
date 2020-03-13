@@ -1,3 +1,47 @@
-{% extends 'base.html' %} {% block page_title %}{{ user }}'s Profile{% endblock %} {% block page_heading %}{{ user }}'s Profile{% endblock %} {% block content %}
-<p>{{ profile.email }}</p>
+{% extends 'base.html' %}
+<!-- {% block page_title %}
+
+{{ user }}'s Profile
+{% endblock %}
+
+{% block page_heading %}
+{{ user }}'s Profile
+{% endblock %}  -->
+{% block content %}
+<div class="container typo-light">
+    <div class="row">
+        <div class="col col-xs-12 col-sm-6">
+            <h2 class="page-title">Welcome {{ user }}</h2>
+            <p></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-xs-12 col-sm-6"> 
+            <form onsubmit="return sendRecommendation(this);">
+                <label for="name">Name</label>
+				<input type="text" name="name" id="fullname" class="form-control" placeholder="nice to meet you ..." required /><br>
+				<label for="email">Email</label>
+                <input type="email" name="email" id="emailaddress" class="form-control" placeholder="this is essential" required /><br>
+                <label for="recommendation">Write your review</label>
+			    <textarea rows="7" name="recommendation" id="recommendation" class="form-control" placeholder="we are awesome, aren't we?" required></textarea><br>
+                <div class="form-group">
+					<label for="rating">Your rating:</label>
+					<select class="form-control" name="rating" id="rating">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+				</div><br>
+                <div class="form-row text-center">
+                    <div class="col">
+                        <button type="submit" class="btn-4">Send review</button>
+                    </div>
+                </div><br>
+            </form>
+        </div>  
+    </div>
+</div>
+<script src="../static/js/sendRecommendation.js"></script>
 {% endblock %}

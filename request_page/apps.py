@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class AboutConfig(AppConfig):
-    name = 'about'
+    name = 'request_page'

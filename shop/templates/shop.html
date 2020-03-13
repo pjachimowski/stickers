@@ -2,13 +2,17 @@
 
 {% block content %}
 
-<div class="container">
-	<h1> HERE IS WORKING LANDING PAGE FOR YOUR SHOP </h1>
+<div class="container typo-light">
+	<h2 class="page-title"> Our environmentally friendly, fun and smart stickers!</h2>
+    <h3 > Register to our portal for purchase history, additional discounts and more...</h3>
+    
 	<div class="display">
+        <fieldset class="form-group">
 		<form action="{% url 'search' %}" method="get">
-			<input type="text" name="q">
+			<input class="search-input" type="text" name="q">
 			<button class="btn-2" type="submit">Search</button>
 		</form>
+        </fieldset>
 	</div>
 
 	<div class="row row-flex">
@@ -17,16 +21,16 @@
 			<div class="panel-body">
 				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 
-				<h3>{{ product.name }}</h3>
+				<h3 class="product-name">{{ product.name }}</h3>
 				<p class="product-description">{{ product.description }}</p>
-				<p>{{ product.price }}</p>
+				<p class="product-price">{{ product.price }}</p>
 
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}
 					<div class="input-group">
 						<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
 						<span class="input-group-btn">
-                        <button class="btn btn-success" type="submit">Add</button>
+                        <button class="btn btn-6" type="submit">Add</button>
                     </span>
 					</div>
 				</form>

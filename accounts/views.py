@@ -63,7 +63,7 @@ def register(request):
 
             if user:
                 auth.login(request, user)
-                messages.success(request, "You have successfully registered")
+                messages.success(request, "You have successfully registered. Add promo code to your first request for 10 eur welcome discount. PROMO CODE: WELCOME")
                 return redirect(reverse('index'))
 
             else:
