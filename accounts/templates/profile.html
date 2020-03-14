@@ -10,13 +10,30 @@
 {% block content %}
 <div class="container typo-light">
     <div class="row">
-        <div class="col col-xs-12 col-sm-6">
-            <h2 class="page-title">Welcome {{ user }}</h2>
-            <p></p>
+        <div class="col col-xs-12 col-sm-8">
+            <h2 class="page-title">Welcome  {{ user }}!!</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col col-xs-12 col-sm-6"> 
+        <div class="col-xs-12 col-md-2 img-align">
+            <img class="quote-img" src="/static/images/PJ_circle_color.png" alt="patryk img">
+        </div>
+        <div class="col-xs-12 col-md-6 quotes">
+            <h3>Thank you for using our service!</h3>
+            <em>Me and the rest of the PJ-stickers team would like to thank you for registering at our portal.
+            We always try to deliver pixel perfect projects, tailored to your needs and for the best price.
+            Our products are unique, durable and environmentally friendly.
+            Those beautiful stickers which you are going to receive are made out of 85% post consumer materials, organic glue and natural pigment.
+            Therefore, thank you for choosing our service and enjoy the outcome. </em><br> -Patryk Jachimowski
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col col-xs-12 col-sm-8">
+            <h3>Help us developi our service. Add your review below.</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-xs-12 col-sm-8"> 
             <form onsubmit="return sendRecommendation(this);">
                 <label for="name">Name</label>
 				<input type="text" name="name" id="fullname" class="form-control" placeholder="nice to meet you ..." required /><br>
@@ -25,9 +42,9 @@
                 <label for="recommendation">Write your review</label>
 			    <textarea rows="7" name="recommendation" id="recommendation" class="form-control" placeholder="we are awesome, aren't we?" required></textarea><br>
                 <div class="form-group">
-					<label for="rating">Your rating:</label>
+					<label for="rating">Your rating:  <span class="rating"> 1 = <i class="far fa-frown"></i>  5 = <i class="far fa-smile"></i></span></label>
 					<select class="form-control" name="rating" id="rating">
-                        <option>1</option>
+                        <option>1 </option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
@@ -43,5 +60,5 @@
         </div>  
     </div>
 </div>
-<script src="../static/js/sendRecommendation.js"></script>
+<script src="/static/js/sendRecommendation.js"></script>
 {% endblock %}

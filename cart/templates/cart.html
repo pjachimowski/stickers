@@ -3,40 +3,51 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-<div class="row row-flex">
-    {% for item in cart_items %}
-    
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
+<div class="container typo-light">
+    <h2 class="page-title"> Thank you for shopping</h2>
+    <h3> Your set of awesome stickers is one click away!</h3>
+    <div class="row row-flex">
+        {% for item in cart_items %}
         
-        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-        
-        <div class="caption">
-            <h3>{{ item.product.name }}</h3>
-            <p class="product-description">{{ item.product.description }}</p>
-            <p>{{ item.product.price }}</p>
-            <p>
-                
-                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="exampleInputAmount" class="sr-only">New Qty</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">Qty</div>
-                            <input name="quantity" type="number" min="0" max="999" class="form-control">
-                            <div class="input-group-addon">{{item.quantity}}</div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
+            
+            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+            
+            <div class="caption">
+                <h3>{{ item.product.name }}</h3>
+                <p class="product-description">{{ item.product.description }}</p>
+                <p>{{ item.product.price }}</p>
+                <p>
+                    
+                    <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                            <div class="input-group input-style">
+                                <div class="input-group-addon">Qty</div>
+                                <input name="quantity" type="number" min="0" max="999" class="form-control">
+                                <div class="input-group-addon">{{item.quantity}}</div>
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                </form>
-            </p>
+                        <button type="submit" class="btn btn-6" aria-hidden="true"><i class="fas fa-edit"></i> Amend</button>
+                    </form>
+                </p>
+            </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
-<div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
-    <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+    <div class="row">
+        <p class="purple-frame">Total:   {{ total }}   <i class="fas fa-euro-sign"></i></p>
+        <a href="{% url 'checkout' %}" class="btn btn-4" role="button">
+        <i class="fas fa-shopping-basket"></i> Checkout</a>
+    </div>
+    <div class="row">
+        <div class="text-center">
+			<div>
+				<img class="img-cart" src="/static/images/ZebraSticker.png" alt="logo">
+            </div>
+		</div>
+    </div>
 </div>
 
 {% endblock %}

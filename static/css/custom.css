@@ -29,6 +29,10 @@
       background: rgba(0,0,0,0.4);
   }
 
+  .fa-bars {
+      color: white;
+  }
+
   .logo {
     background: url("/static/images/pj-stickers-white.png");
     background-position: center;
@@ -170,6 +174,10 @@
     margin: 30px 0px 10px 0px;
 }
 
+.intro {
+    margin-bottom: 25px;
+}
+
 .img-home {
     background-position: center;
     background-repeat: no-repeat;
@@ -211,6 +219,7 @@
 .quotes {
     text-align: left;
 }
+/*-------------media ---------------*/
 
 @media(max-width: 991px) {
     .quotes {
@@ -219,6 +228,48 @@
     .img-align {
     text-align: center;
     margin: 20px 0px 0px 0px;
+    }
+    .img-home {
+    align-content: center;
+    height: 125px;
+    width: 110px;
+    margin: 30px 0px;
+    }
+    .logo-home {
+    display: none;
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 200px;
+    margin: 30px 0px 10px 0px; */
+    }
+    .container {
+    margin-bottom: 10px;
+    height: 100%;
+    }
+    h2.page-title {
+    font-size: large;
+    font-weight: 700;
+    margin-right: 70px;
+    }
+    h3 {
+    font-size: medium;
+    font-weight: 700;
+    margin-right: 70px;
+    }
+    .btn-1 {
+    width: 90px;
+    font-size: small;
+    text-align: left;
+    border-radius: none;
+    border: none;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+    }
+    .btn-1:hover {
+    color: rgb(175, 0, 175);
     }
 }
 
@@ -237,6 +288,34 @@
     font-style: italic;
     font-size: x-small;
     margin-bottom: 45px;
+}
+/*----------------- profile  ------------------*/
+
+.rating {
+    font-size: x-large;
+}
+/* -------------------- cart-----------------*/
+
+.img-cart {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    height: 200px;
+    width: 180px;
+    margin: 80px 0px;
+}
+
+.input-group-addon {
+    background-color: rgb(175, 0, 175);
+}
+
+.purple-frame {
+    border: solid 1px rgb(175, 0, 175);
+    border-radius: 5px;
+    padding: 10px;
+    display: inline;
+    margin: 10px 15px;
 }
 
 /*----------------- layout ---------*/
@@ -405,12 +484,17 @@ ul.social-footer2 li a {display: block;	height:30px;width: 30px;text-align: cent
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
-    background-color: #c67605;
+    background-color: rgb(255, 166, 0);
 }
 
 .label-warning[href],
 .badge-warning[href] {
-    background-color: #c67605;
+    background-color: rgb(255, 166, 0)
 }
 
+input#id_email {
+    color: #000;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
 
