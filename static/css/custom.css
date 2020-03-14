@@ -179,6 +179,7 @@
 }
 
 .img-home {
+    background: url("/static/images/ZebraSticker.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -355,6 +356,7 @@ body {
 .product-name {
     color: rgb(175, 0, 175);
     font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
 }
 
 .product {
@@ -363,7 +365,7 @@ body {
     background-repeat: no-repeat;
     width: 150px;
     height: 150px;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 caption p {
@@ -388,14 +390,16 @@ caption p {
 
 .product-description {
     min-height: 40px;
-    color: rgb(0, 0, 0);
+    color: rgb(58, 58, 58);
 }
 .product-price {
     color: rgb(58, 58, 58);
+    font-size: large;
 }
 /*----------------- footer------------------*/
 
 .logo2 {
+    background: url("/static/images/pj-stickers-pink.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
