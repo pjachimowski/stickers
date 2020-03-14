@@ -3,18 +3,80 @@
 
 
 ..........................
-prep for README
-footer source:
-https://colorlib.com/wp/bootstrap-footer/
+
+# PJ - Stickers
+
+Buy our eco-friendly, inspiring fun and smart stickers! Get your personalized design and stand out with your stickers? High quality print, free delivery in Amsterdam area and more. 
+
+## UX
+
+PJ - Stickers in an e-commerce website.
+It provides sets ready stickers to purchase as well as form to request custom design.
+
+User can register to Partal, creating profile. 
+Log in/out functionality. 
+
+## Features
+
+Logo at the top left corner (self designed)
+- a link to home page
+Home btn
+-a link to home page
+
+Teaser
+-short description of the portal
+
+Content
+-list of cards with stickers.
+
+Footer
+- social links for promotional and communication purposes.
+- a link to author's GitHub profile
+- copyright
+
+###In the future:
+- user purchase history
+- more content
+
+## Technologies Used
+###Languages
+- HTML
+- CSS
+- JavaScript
+- Python
+- django
+- Stripe payments
+
+###Libraries
+- Bootstrap (https://getbootstrap.com/)
+- Fontawesome (https://fontawesome.com/)
+
+###Database
+- AWS s3
+- local sqlite
+
+## Credits
+
+### Content
+
+
+## Use of other code.
+- footer source(edited)  https://colorlib.com/wp/bootstrap-footer/
+
+- I use fragments of the code from previous lessons of Code Institure.
+All codes were sourced from my own profile on GitHub portal
+Parts of the code were edited and adjust to page layout.
+
+### Media
+Some stickers were downloaded for free picture collection https://www.pexels.com/
+Icons were taken from font awesome portal.
+Entire text was edited by author.
+
+### Acknowledgments
+
+- I received inspiration for this project from various lessons conducted at Code Institute
+
 ..........................
-
-
-
-
-
-Welcome pjachimowski,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
 
 ## Gitpod Reminders
 
@@ -44,4 +106,3 @@ We continually tweak and adjust this template to help give you the best experien
 
 --------
 
-Happy coding!
