@@ -11,7 +11,7 @@
 		</div>
 			<div class="intro col-xs-12 col-md-6">
 				<div>
-					<img class="logo-home" src="/static/images/pj-stickers-pink.png" alt="logo">
+					<img class="logo-home" src="{% static "images/pj-stickers-pink.png" %}" alt="logo">
                 </div>
 				<h1 class="page-title">Custom stickers, unique, fun and eco!</h1>
 				<h3>Pixel perfect projects, tailored to your needs and for the best price</h3><br>
@@ -57,7 +57,7 @@
 				<div class="row typo-light">
                     <div class="col-xs-12 col-md-2"></div>
 					<div class="col-xs-12 col-md-2 img-align">
-						<img class="quote-img" src="/static/images/asia_t.jpg" alt="asia img">
+						<img class="quote-img" src="{% static "images/asia_t.jpg" %}" alt="asia img">
 					</div>
 					<div class="col-xs-12 col-md-6 quotes">
                         <h3>Asia Trzeciak</h3>
@@ -68,7 +68,7 @@
                 <div class="row typo-light">
                     <div class="col-xs-12 col-md-2"></div>
 					<div class="col-xs-12 col-md-2 img-align">
-						<img class="quote-img" src="/static/images/ammar_c.jpg" alt="ammar img">
+						<img class="quote-img" src="{% static "images/ammar_c.jpg" %}" alt="ammar img">
 					</div>
 					<div class="col-xs-12 col-md-6 quotes">
                         <h3>Ammar Ceker</h3>
@@ -79,7 +79,7 @@
                 <div class="row typo-light">
                     <div class="col-xs-12 col-md-2"></div>
 					<div class="col-xs-12 col-md-2 img-align">
-						<img class="quote-img" src="/static/images/michael_o.jpg" alt="michael img">
+						<img class="quote-img" src="{% static "images/michael_o.jpg" %}" alt="michael img">
 					</div>
 					<div class="col-xs-12 col-md-6 quotes">
                         <h3>Micheal Omescu</h3>
@@ -91,43 +91,4 @@
 			</div>
 </div>
 
-
-<!------------bla bla bal-->
-
-
-
-<!-- <div class="container">
-    <div class="display">
-        <form action="{% url 'search' %}" method="get">
-            <input type="text" name="q">
-            <button class="btn-2" type="submit">Search</button>
-        </form>
-    </div>
-
-    <div class="row row-flex">
-        {% for product in products %}
-        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
-            <div class="panel-body">
-                <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
-
-                <h3>{{ product.name }}</h3>
-                <p class="product-description">{{ product.description }}</p>
-                <p>{{ product.price }}</p>
-
-                <form method="post" action="{% url 'add_to_cart' product.id %}">
-                    {% csrf_token %}
-                    <div class="input-group">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                        <span class="input-group-btn">
-                        <button class="btn btn-success" type="submit">Add</button>
-                    </span>
-                    </div>
-                </form>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div> -->
-
-
-	{% endblock %}
+{% endblock %}
