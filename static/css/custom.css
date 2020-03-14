@@ -379,12 +379,12 @@ caption p {
 
 .panel-default {
     border-color: transparent;
-    padding: 0 10px;
     margin: 5px 10px;
 }
 
 .panel-body {
     height: 100%;
+    width: 300px;
     margin: 5px 10px;
 }
 
