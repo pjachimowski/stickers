@@ -179,7 +179,6 @@
 }
 
 .img-home {
-    background: url("/static/images/ZebraSticker.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -399,7 +398,6 @@ caption p {
 /*----------------- footer------------------*/
 
 .logo2 {
-    background: url("/static/images/pj-stickers-pink.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
