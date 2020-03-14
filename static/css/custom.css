@@ -385,6 +385,7 @@ caption p {
 
 .panel-body {
     height: 100%;
+    margin: 5px 10px;
 }
 
 .product-description {
