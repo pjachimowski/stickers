@@ -16,10 +16,10 @@ It provides sets ready stickers to purchase as well as form to request custom de
 User can register to Partal, creating profile. 
 Log in/out functionality. 
 
-##USER STORIES
-###Epic:
+## USER STORIES
+### Epic:
 As a user, I want to purchase eco-friendly stickers 
-###Detailed:
+### Detailed:
 As a private person (resident of Amsterdam), I want to purchase already created eco stickers so that I can use them as an inspiration at my party/ wrap my gifts/ promote my ideas and be sure that I am helping the environment. 
 Ensure enough inspirational stickers for any occasion
 - Promote sustainability on each sticker
@@ -55,12 +55,12 @@ Footer
 - a link to author's GitHub profile
 - copyright
 
-###In the future:
+### In the future:
 - user purchase history
 - more content
 
 ## Technologies Used
-###Languages
+### Languages
 - HTML
 - CSS
 - JavaScript
@@ -68,11 +68,11 @@ Footer
 - django
 - Stripe payments
 
-###Libraries
+### Libraries
 - Bootstrap (https://getbootstrap.com/)
 - Fontawesome (https://fontawesome.com/)
 
-###Database
+### Database
 - AWS s3
 - local sqlite
 
@@ -99,8 +99,8 @@ Entire text was edited by author.
 
 ..........................
 
-#### WIREFRAMES
-An early dtage draft of the project. Changes appied. 
+# WIREFRAMES
+An early stage draft of the app. Changes appied. 
 
 ### Home page top
 ![](static/images/wireframes/home_page_top.jpg)

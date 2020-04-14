@@ -40,8 +40,13 @@
     </div>
     <div class="row">
         <p class="purple-frame typo-light">Total:   {{ total }}   <i class="fas fa-euro-sign"></i></p>
-        <a href="{% url 'checkout' %}" class="btn btn-4 typo-light" role="button">
-        <i class="fas fa-shopping-basket"></i> Checkout</a>
+        {% if product_count > 0 %}
+			<a href="{% url 'checkout' %}" class="btn btn-4 typo-light" role="button">
+            <i class="fas fa-shopping-basket"></i> Checkout</a>
+			{% else %}			
+        <a href="#" class="btn btn-4 typo-light" role="button">
+        <i class="fas fa-shopping-basket"></i>Cart empty</a>
+        {% endif %}
     </div>
     <div class="row">
         <div class="text-center">
