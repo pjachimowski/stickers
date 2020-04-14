@@ -20,11 +20,12 @@ Log in/out functionality.
 ###Epic:
 As a user, I want to purchase eco-friendly stickers 
 ###Detailed:
-As a private person, I want to purchase already created eco stickers so that I can use them as an inspiration at my party/ wrap my gifts/ promote my ideas and be sure that I am helping the environment. 
+As a private person (resident of Amsterdam), I want to purchase already created eco stickers so that I can use them as an inspiration at my party/ wrap my gifts/ promote my ideas and be sure that I am helping the environment. 
 Ensure enough inspirational stickers for any occasion
 - Promote sustainability on each sticker
 - Create a promo code for first purchase
 - Create company/ private user field within account setup 
+- Promote free delivery within Amsterdam borders
 
 As a new business owner, I want to purchase custom made eco stickers so that I can promote my company/ run the campaign and use sustainability as a promotional factor creating a positive image of the newly created brand. 
 - Create friendly request form 
@@ -98,31 +99,24 @@ Entire text was edited by author.
 
 ..........................
 
-## Gitpod Reminders
+#### WIREFRAMES
+An early dtage draft of the project. Changes appied. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Home page top
+![](static/images/wireframes/home_page_top.jpg)
+### Home page about
+![](static/images/wireframes/home_page_about.jpg)
+### Home page benefits
+![](static/images/wireframes/home_page_benefits.jpg)
+### Home page quotes
+![](static/images/wireframes/home_page_quotes.jpg)
+### Footer
+![](static/images/wireframes/footer.jpg)
+### Gallery
+![](static/images/wireframes/gallery.jpg)
+### Request Form
+![](static/images/wireframes/request_form.jpg)
 
-`python3 -m http.server`
-
-A blue button should appear to click: *Expose*,
-
-Another blue button should appear to click: *Open Browser*.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Expose*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
 --------
 
