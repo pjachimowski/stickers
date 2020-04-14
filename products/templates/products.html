@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
 <div class="container">
 	<div class="row typo-light">
 		<div class="col-xs-12 col-md-6 text-center">
@@ -14,7 +13,8 @@
 					<img class="logo-home" src="{% static "images/pj-stickers-pink.png" %}" alt="logo">
                 </div>
 				<h1 class="page-title">Custom stickers, unique, fun and eco!</h1>
-				<h3>Pixel perfect projects, tailored to your needs and for the best price</h3><br>
+				<h3>Pixel perfect projects, tailored to your needs and for the best price</h3>
+                <br>
 				<a href="{% url 'shop' %}" class="btn-4"> SHOP NOW </a> 
 			</div>
 		</div>
@@ -28,66 +28,78 @@
 						<i class="fas fa-shipping-fast fa-4x"></i>
 						<h3 class="typo-purple">Fast and safe </h3>
 						<p>Parcel tracking and express delivery available. And also, free shpping in Amsterdam area.</p>
-						</div>
-					</div>
-					<div class="info col-xs-12 col-md-4">
-						<div>
-							<i class="fas fa-user-edit fa-4x"></i>
-							<h3 class="typo-purple">Personalised </h3>
-							<p>Share your idea and we will get your design ready or send us your own project!
-							</p>
-						</div>
-					</div>
-					<div class="info col-xs-12 col-md-4">
-						<div>
-							<i class="fas fa-leaf fa-4x"></i>
-							<h3 class="typo-purple">Environmentally friendly</h3>
-							<p> Our stickers are made out of 85% post consumer materials, organic glue and natural pigments.
-							</p>
-						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<!----------------------QUOTES------------------->
-        
-		<div class="background-gradient quotes-section">
-			<div class="container">
-				<div class="row typo-light">
-                    <div class="col-xs-12 col-md-2"></div>
-					<div class="col-xs-12 col-md-2 img-align">
-						<img class="quote-img" src="{% static "images/asia_t.jpg" %}" alt="asia img">
-					</div>
-					<div class="col-xs-12 col-md-6 quotes">
-                        <h3>Asia Trzeciak</h3>
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><br>
-						<em>"I am really happy with PJ Stickers' service and reliability. I used they stickers for my personal art project and it has been money well spent."</em>
-					</div>
-				</div>
-                <div class="row typo-light">
-                    <div class="col-xs-12 col-md-2"></div>
-					<div class="col-xs-12 col-md-2 img-align">
-						<img class="quote-img" src="{% static "images/ammar_c.jpg" %}" alt="ammar img">
-					</div>
-					<div class="col-xs-12 col-md-6 quotes">
-                        <h3>Ammar Ceker</h3>
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><br>
-						<em>"I really like the the fact that these stickers are eco-friendly. Not a lot of similar products can say that. I am happy to have this option for my striker collection."</em>
-					</div>
-				</div>
-                <div class="row typo-light">
-                    <div class="col-xs-12 col-md-2"></div>
-					<div class="col-xs-12 col-md-2 img-align">
-						<img class="quote-img" src="{% static "images/michael_o.jpg" %}" alt="michael img">
-					</div>
-					<div class="col-xs-12 col-md-6 quotes">
-                        <h3>Micheal Omescu</h3>
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><br>
-						<em>"I ordered a lot of personalised stickers fro a campaign I am doing with my job and I have to say I was very happy with how the stickers turned out. My colleagues love them and the stickers are now part of our company fun and playful culture. Will sure order more for future campaigns."</em>
-					</div>
-				</div>
-                
-			</div>
-</div>
-
+                <div class="info col-xs-12 col-md-4">
+                    <div>
+                        <i class="fas fa-user-edit fa-4x"></i>
+                        <h3 class="typo-purple">Personalised </h3>
+                        <p>Share your idea and we will get your design ready or send us your own project!
+                        </p>
+                    </div>
+                </div>
+                <div class="info col-xs-12 col-md-4">
+                    <div>
+                        <i class="fas fa-leaf fa-4x"></i>
+                        <h3 class="typo-purple">Environmentally friendly</h3>
+                        <p> Our stickers are made out of 85% post consumer materials, organic glue and natural pigments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!----------------------QUOTES------------------->
+    <div class="background-gradient quotes-section">
+        <div class="container">
+            <div class="row typo-light">
+                <div class="col-xs-12 col-md-2"></div>
+                <div class="col-xs-12 col-md-2 img-align">
+                    <img class="quote-img" src="{% static "images/asia_t.jpg" %}" alt="asia img">
+                </div>
+                <div class="col-xs-12 col-md-6 quotes">
+                    <h3>Asia Trzeciak</h3>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <br>
+                    <em>"I am really happy with PJ Stickers' service and reliability. I used they stickers for my personal art project and it has been money well spent."</em>
+                </div>
+            </div>
+            <div class="row typo-light">
+                <div class="col-xs-12 col-md-2"></div>
+                <div class="col-xs-12 col-md-2 img-align">
+                    <img class="quote-img" src="{% static "images/ammar_c.jpg" %}" alt="ammar img">
+                </div>
+                <div class="col-xs-12 col-md-6 quotes">
+                    <h3>Ammar Ceker</h3>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <br>
+                    <em>"I really like the the fact that these stickers are eco-friendly. Not a lot of similar products can say that. I am happy to have this option for my striker collection."</em>
+                </div>
+            </div>
+            <div class="row typo-light">
+                <div class="col-xs-12 col-md-2"></div>
+                <div class="col-xs-12 col-md-2 img-align">
+                    <img class="quote-img" src="{% static "images/michael_o.jpg" %}" alt="michael img">
+                </div>
+                <div class="col-xs-12 col-md-6 quotes">
+                    <h3>Micheal Omescu</h3>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <br>
+                    <em>"I ordered a lot of personalised stickers fro a campaign I am doing with my job and I have to say I was very happy with how the stickers turned out. My colleagues love them and the stickers are now part of our company fun and playful culture. Will sure order more for future campaigns."</em>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

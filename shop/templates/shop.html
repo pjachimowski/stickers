@@ -1,20 +1,16 @@
 {% extends 'base.html' %}
-
 {% block content %}
-
 <div class="container">
 	<h2 class="page-title typo-light"> Our environmentally friendly, fun and smart stickers!</h2>
     <h3 class="typo-light"> Register to our portal for purchase history, additional discounts and more...</h3>
-    
 	<div class="display">
         <fieldset class="form-group">
-		<form action="{% url 'search' %}" method="get">
-			<input class="search-input" type="text" name="q">
-			<button class="btn-2" type="submit">Search</button>
-		</form>
+            <form action="{% url 'search' %}" method="get">
+                <input class="search-input" type="text" name="q">
+                <button class="btn-2" type="submit">Search</button>
+            </form>
         </fieldset>
 	</div>
-
 	<div class="row row-flex ">
 		{% for product in products %}
 		<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
@@ -22,8 +18,7 @@
 				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 				<h3 class="product-name">{{ product.name }}</h3>
 				<p class="product-description"> {{ product.description }}</p>
-				<p class="product-price">{{ product.price }} <i class="fas fa-euro-sign"></i> </p>
-
+				<p class="product-price">{{ product.price }} <i class="fas fa-euro-sign"></i></p>
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}
 					<div class="input-group">

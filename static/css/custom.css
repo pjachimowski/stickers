@@ -10,7 +10,6 @@
     margin-bottom: 10px;
 }
 
-
 .background-gradient {
   background:
     -webkit-linear-gradient(315deg, hsla(314.4, 100%, 31.4%, 1) 0%, hsla(314.4, 100%, 31.4%, 0) 70%),
@@ -360,12 +359,6 @@ body {
     min-height: 100%;  
 }
 
-/* html should be comented out */
-
-/* html {
-  height: 100%;
-} */
-
 /*------------------ shop ------------------*/
 
 .search-input {
@@ -474,7 +467,6 @@ footer ul{
     text-transform: uppercase;
 }
 
-/* .widget-title.text-center,.widget-title.text-center span::after {margin-left: auto;margin-right:auto;left: 0;right: 0;} */
 .typo-light,
 .typo-light h2, 
 .typo-light h1, 
@@ -491,8 +483,6 @@ footer ul{
 ul.social-footer2 {	margin: 0;padding: 0;	width: auto;}
 ul.social-footer2 li {display: inline-block;padding: 0;}
 ul.social-footer2 li a {display: block;	height:30px;width: 30px;text-align: center;}
-
-
 
 /*------------------defauls ------------------*/
 
@@ -523,4 +513,3 @@ input#id_email {
     border-radius: 5px;
     margin-bottom: 5px;
 }
-

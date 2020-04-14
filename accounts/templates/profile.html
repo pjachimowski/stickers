@@ -1,6 +1,6 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %}{% load static %}
 {% block content %}
+
 <div class="container typo-light">
     <div class="row">
         <div class="col col-xs-12 col-sm-8">
@@ -9,7 +9,6 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-md-2 img-align">
-            
             <img class="quote-img" src="{% static "images/PJ_circle_color.png" %}" alt="patryk_img">
         </div>
         <div class="col-xs-12 col-md-6 quotes">
@@ -18,9 +17,11 @@
             We always try to deliver pixel perfect projects, tailored to your needs and for the best price.
             Our products are unique, durable and environmentally friendly.
             Those beautiful stickers which you are going to receive are made out of 85% post consumer materials, organic glue and natural pigment.
-            Therefore, thank you for choosing our service and enjoy the outcome. </em><br> -Patryk Jachimowski
+            Therefore, thank you for choosing our service and enjoy the outcome.</em>
+            <br>-Patryk Jachimowski
         </div>
-    </div><br>
+    </div>
+    <br>
     <div class="row">
         <div class="col col-xs-12 col-sm-8">
             <h3>Help us develop our service. Add your review below.</h3>
@@ -30,29 +31,35 @@
         <div class="col col-xs-12 col-sm-8"> 
             <form onsubmit="return sendRecommendation(this);">
                 <label for="name">Name</label>
-				<input type="text" name="name" id="fullname" class="form-control" placeholder="nice to meet you ..." required /><br>
+				    <input type="text" name="name" id="fullname" class="form-control" placeholder="nice to meet you ..." required />
+                    <br>
 				<label for="email">Email</label>
-                <input type="email" name="email" id="emailaddress" class="form-control" placeholder="this is essential" required /><br>
+                    <input type="email" name="email" id="emailaddress" class="form-control" placeholder="this is essential" required />
+                    <br>
                 <label for="recommendation">Write your review</label>
-			    <textarea rows="7" name="recommendation" id="recommendation" class="form-control" placeholder="we are awesome, aren't we?" required></textarea><br>
+			        <textarea rows="7" name="recommendation" id="recommendation" class="form-control" placeholder="we are awesome, aren't we?" required></textarea>
+                    <br>
                 <div class="form-group">
 					<label for="rating">Your rating:  <span class="rating"> 1 = <i class="far fa-frown"></i>  5 = <i class="far fa-smile"></i></span></label>
 					<select class="form-control" name="rating" id="rating">
-                        <option>1 </option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
                     </select>
-				</div><br>
+				</div>
+                <br>
                 <div class="form-row text-center">
                     <div class="col">
                         <button type="submit" class="btn-4">Send review</button>
                     </div>
-                </div><br>
+                </div>
+                <br>
             </form>
         </div>  
     </div>
 </div>
 <script src="/static/js/sendRecommendation.js"></script>
+
 {% endblock %}

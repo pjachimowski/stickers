@@ -22,7 +22,6 @@ from search import urls as urls_search
 from checkout import urls as urls_checkout
 from home.views import index
 from products.views import all_products
-# from shop.views import all_products
 from django.views import static
 from .settings import MEDIA_ROOT
 from request_page import urls as urls_request_page
