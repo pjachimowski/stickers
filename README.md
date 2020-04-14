@@ -16,6 +16,26 @@ It provides sets ready stickers to purchase as well as form to request custom de
 User can register to Partal, creating profile. 
 Log in/out functionality. 
 
+##USER STORIES
+###Epic:
+As a user, I want to purchase eco-friendly stickers 
+###Detailed:
+As a private person, I want to purchase already created eco stickers so that I can use them as an inspiration at my party/ wrap my gifts/ promote my ideas and be sure that I am helping the environment. 
+Ensure enough inspirational stickers for any occasion
+- Promote sustainability on each sticker
+- Create a promo code for first purchase
+- Create company/ private user field within account setup 
+
+As a new business owner, I want to purchase custom made eco stickers so that I can promote my company/ run the campaign and use sustainability as a promotional factor creating a positive image of the newly created brand. 
+- Create friendly request form 
+- Promote sustainability on each sticker
+
+As a company, I want to purchase a design of eco stickers so that I can advertise in the fairs/ increase my audience via branding/ have it for internal use and in any case promote sustainability which aligns with the vision of my company. 
+- Create company/ private user field within account setup 
+- Promote sustainability on each sticker
+- Create discounts on larger purchases 
+
+
 ## Features
 
 Logo at the top left corner (self designed)
