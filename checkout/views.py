@@ -36,7 +36,7 @@ def checkout(request):
                     quantity = quantity
                     )
                 order_line_item.save()
-                
+            customer = None
             try:
                 customer = stripe.Charge.create(
                     amount = int(total * 100),
@@ -47,7 +47,7 @@ def checkout(request):
             except stripe.error.CardError:
                 print('Stripe Card Decline')
                 messages.error(request, "Your card was declined!")
-                
+
             if customer.paid:
                 messages.error(request, "You have successfully paid")
                 request.session['cart'] = {}

@@ -8,8 +8,9 @@ def request_page(request):
     return render(request, "request_page.html")
     # if function(response)
 
-
+# <!-- Michal homework -->
 def request_sent(request):
     """A view that displays message after sending a request"""
     messages.success(request, 'Your request was sent. We will get back to you within 5 working days.')
-    return redirect(reverse('request_page.html'))
+    return redirect(reverse('request_page'))
+# <!-- Michal homework -->
