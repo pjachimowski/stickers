@@ -97,6 +97,13 @@ Entire text was edited by author.
 
 - I received inspiration for this project from various lessons conducted at Code Institute
 
+## TESTING
+
+HTML code produces NO errors on being passed through a validator.
+- https://validator.w3.org/nu/ 
+
+
+
 ..........................
 
 # WIREFRAMES

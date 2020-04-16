@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% load bootstrap_tags %}
 {% block content %}
-
+<!--User login page. Available only when no user is logged in-->
 <div class="container typo-light">
     <div class="row">
         <div class="col col-xs-12 col-sm-4">
@@ -9,6 +9,7 @@
                     <h2 class="page-title">Login</h2>
                     {% csrf_token %}
                     {{ user_form | as_bootstrap }}
+                    <!--Forgot password button. Lunch a form for user to fill in an email details in order to receive new password confirmation-->
                     <p class="links"><a href="{% url 'password_reset' %}">Forgot my password</a></p>
                     <div class="text-center">
                         <button type="submit" class="btn-4">Login</button>

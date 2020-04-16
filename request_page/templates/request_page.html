@@ -1,21 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- One of the most important functionality of the website is ordering custom made stickers as well. Here user can submit the form which is send to company's email. All the fields are required. Form validators appear. User does not have to be registered in order to send the request. Below information says: "You can receive promo code once you register to our portal " -->
 <div class="container">
 	<div class="row typo-light">
 		<div class="col col-xs-12 col-sm-6">
+            <!--when request sent successfully message will appear here-->
+            {% if messages %}
+                <div class="alert alert-success">
+                    <div class="messages">
+                        {% for message in messages %}
+                        {{ message }}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
 			<h2 class="page-title">Request a custom made sticker</h2>
 			<form onsubmit="return sendEmail(this);">
-                <label for="name">Name</label>
+                <label for="fullname">Name</label>
 				    <input type="text" name="name" id="fullname" class="form-control" placeholder="nice to meet you ..." required />
                     <br>
-				<label for="email">Email</label>
+				<label for="emailaddress">Email</label>
                     <input type="email" name="email" id="emailaddress" class="form-control" placeholder="this is essential" required />
                     <br>
                 <label for="title">Title</label>
                     <input type="text" name="title" id="title" class="form-control" placeholder="how would you call your project" required/>
                     <br>
                 <label for="projectsummary">Project introduction</label>
-                    <textarea type="text" rows="3" name="projectsummary" id="projectsummary" class="form-control" placeholder="short introduction goes here" required></textarea>
+                    <textarea rows="3" name="projectsummary" id="projectsummary" class="form-control" placeholder="short introduction goes here" required></textarea>
                     <br>
                 <div class="form-group">
 					<label for="quantity">How many do you need?</label>
@@ -44,7 +55,7 @@
                     <br>
                 <div class="form-row text-center">
                     <div class="col">
-                        <button type="submit" class="btn-4">Request a design</button>
+                        <button type="submit" href="{% url 'request_sent' %}" class="btn-4">Request a design</button>
                     </div>
                 </div>
                 <br>

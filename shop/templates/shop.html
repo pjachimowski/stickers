@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+<!-- SHOP is a gallery of existing products. Here user can select quantity of the stickers he/she wants to add to the cart. "Add" button will send the quantity to the cart tab. -->
 <div class="container">
 	<h2 class="page-title typo-light"> Our environmentally friendly, fun and smart stickers!</h2>
     <h3 class="typo-light"> Register to our portal for purchase history, additional discounts and more...</h3>
@@ -12,8 +13,9 @@
         </fieldset>
 	</div>
 	<div class="row row-flex ">
+    <!-- PRODUCT: each item (sticker) is displayed in a form of card. Each card consist of: Image of the item, price, title, description and the window where user can fill the number of items he/she want to add to the cart.-->
 		{% for product in products %}
-		<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+		<div class="col-xs-12 col-sm-offset-0 col-sm-6 col-md-3 display panel panel-default">
 			<div class="panel-body">
 				<div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
 				<h3 class="product-name">{{ product.name }}</h3>
@@ -22,8 +24,10 @@
 				<form method="post" action="{% url 'add_to_cart' product.id %}">
 					{% csrf_token %}
 					<div class="input-group">
+                    <!-- here user can add the quentity of the stickers. min 1 max 999. Only number can be typed in. -->
 						<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
 						<span class="input-group-btn">
+                        <!--"Add" button will send the quantity to the cart tab. -->
                             <button class="btn btn-6 typo-light" type="submit">Add</button>
                         </span>
 					</div>

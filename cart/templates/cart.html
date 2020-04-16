@@ -1,10 +1,17 @@
 {% extends 'base.html' %} {% load static from staticfiles %}
 {% load bootstrap_tags %}
 {% block content %}
+<!-- cart page display all the items added to the cart. It also allows to modify the amount of ordered items. Cart has NO option of adding new items not listed in the cart already. At the bottom of the page there is section displaying the full value of the items in the cart -->
 <div class="container">
-    <h2 class="page-title typo-light"> Thank you for shopping</h2>
+    {% if user.is_authenticated %}
+    <h2 class="page-title typo-light"> Thank you for shopping {{ user }}</h2>
+    {% else %}
+    <h2 class="page-title typo-light"> You have to be logged in to continue</h2>
+    {% endif %}
+    {% if product_count > 0 %}
     <h3 class="typo-light"> Your set of awesome stickers is one click away!</h3>
     <h4 class="typo-light"> If you would like to change your order, edit the quantity and click "Amend"</h4>
+    {% endif %}
     <div class="row row-flex">
         {% for item in cart_items %}
         <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default panel-display">
@@ -13,14 +20,13 @@
                 </div>
                 <div class="caption">
                     <h3 class="product-name"> {{ item.product.name }}</h3>
-                    <p class="product-description"> {{ item.product.description }}</p>
                     <p class="product-price"> {{ item.product.price }} <i class="fas fa-euro-sign"></i></p>
                     <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="exampleInputAmount" class="sr-only">New Qty</label>
                             <div class="input-group input-style">
-                                <div class="input-group-addon typo-light">Qty (max 500)</div>
+                                <div class="input-group-addon typo-light">Qty</div>
                                     <input name="quantity" type="number" min="0" max="500" class="form-control">
                                 <div class="input-group-addon typo-light">{{item.quantity}}</div>
                             </div>
@@ -32,7 +38,9 @@
         </div>
         {% endfor %}
     </div>
+    <!-- if there is no product in the cart "check out" button will be unavailable. Else, "check out" button will lead to purchase page-->
     <div class="row">
+    <!-- this window displays the total value of the items in the cart. It will be updated each time the user amend the quantity -->
         <p class="purple-frame typo-light">Total: {{ total }}  <i class="fas fa-euro-sign"></i></p>
         {% if product_count > 0 %}
 			<a href="{% url 'checkout' %}" class="btn btn-4 typo-light" role="button">
@@ -40,7 +48,7 @@
             </a>
 			{% else %}			
             <a href="#" class="btn btn-4 typo-light" role="button">
-            <i class="fas fa-shopping-basket"></i>Cart empty</a>
+            <i class="fas fa-shopping-basket"></i>Cart is empty</a>
         {% endif %}
     </div>
     <div class="row">
