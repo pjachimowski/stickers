@@ -5,10 +5,8 @@
 	<div class="row typo-light">
 		<div class="col col-xs-12 col-sm-6">
 			<h2 class="page-title">Request a custom made sticker</h2>
-            <!-- Michal homework -->
 			<form method="POST" action="{% url 'request_sent' %}" onsubmit="sendEmail(this);">
                 {% csrf_token %}
-                <!-- Michal homework -->
                 <label for="fullname">Name</label>
 				    <input type="text" name="name" id="fullname" class="form-control" placeholder="nice to meet you ..." required />
                     <br>
@@ -48,9 +46,7 @@
                     <br>
                 <div class="form-row text-center">
                     <div class="col">
-                    <!-- Michal homework -->
                         <button type="submit" class="btn-4">Request a design</button>
-                        <!-- Michal homework -->
                     </div>
                 </div>
                 <br>

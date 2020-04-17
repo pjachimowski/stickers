@@ -26,12 +26,10 @@ def login(request):
         if user_form.is_valid():
             user = auth.authenticate(request.POST['username_or_email'],
                                      password=request.POST['password'])
-
             if user:
                 auth.login(request, user)
                 messages.error(request, "You have successfully logged in")
-
-                if request.GET and request.GET['next'] !='':
+                if request.GET and request.GET['next'] != '':
                     next = request.GET['next']
                     return HttpResponseRedirect(next)
                 else:
@@ -40,7 +38,6 @@ def login(request):
                 user_form.add_error(None, "Your username or password are incorrect")
     else:
         user_form = UserLoginForm()
-
     args = {'user_form': user_form, 'next': request.GET.get('next', '')}
     return render(request, 'login.html', args)
 
@@ -73,3 +70,9 @@ def register(request):
 
     args = {'user_form': user_form}
     return render(request, 'register.html', args)
+
+
+def review_sent(request):
+    """A view that displays message after sending a review"""
+    messages.success(request, 'Your review was sent. Thank you for helping us to improve our service.')
+    return redirect(reverse('profile'))

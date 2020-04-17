@@ -31,7 +31,9 @@
     </div>
     <div class="row">
         <div class="col col-xs-12 col-sm-8"> 
-            <form onsubmit="return sendRecommendation(this);">
+            <!-- This form allow user to send an email with review. Possitive submited form result wit ha message displaied on the screen -->
+            <form method="POST" action="{% url 'review_sent' %}" onsubmit="return sendEmail(this);">
+                {% csrf_token %}
                 <label for="name">Name</label>
 				    <input type="text" name="name" id="fullname" class="form-control" placeholder="nice to meet you ..." required />
                     <br>
