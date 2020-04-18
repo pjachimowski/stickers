@@ -102,6 +102,14 @@ Entire text was edited by author.
 HTML code produces NO errors on being passed through a validator.
 - https://validator.w3.org/nu/ 
 
+# Password reset
+
+Password reset tested and passed successfuly. It may display following error:
+SMTPAuthenticationError at /accounts/password-reset/
+Due to google account default setups. 
+
+Last time updated: 18.04.2020 after which averything was working correctly. 
+
 
 
 ..........................
