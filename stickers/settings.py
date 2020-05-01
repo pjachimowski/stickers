@@ -142,17 +142,17 @@ USE_TZ = True
 
 # vvv connection with S3 // comment out when working locally // uncomment when pushing to heroku VVV
 
-# AWS_S3_OBJECT_PARAMETERS = {
-#     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-#     'CacheControl': 'max-age=94608000'
-# }
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000'
+}
 
-# AWS_STORAGE_BUCKET_NAME = 'pj-stickers'
-# AWS_S3_REGION_NAME = 'eu-west-1'
-# AWS_ACCESS_KEY_ID = os.environ.get("AWS_SECRET_KEY_ID")
-# AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = 'pj-stickers'
+AWS_S3_REGION_NAME = 'eu-west-1'
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_SECRET_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 # ^^^ connection with S3 // comment out when working locally // uncomment when pushing to heroku ^^^
 
@@ -160,7 +160,7 @@ STATICFILES_LOCATION = 'static'
 
 # vvv connection with S3 // comment out when working locally // uncomment when pushing to heroku VVV
 
-# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 # ^^^ connection with S3 // comment out when working locally // uncomment when pushing to heroku ^^^
 
@@ -176,7 +176,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # vvv connection with S3 // comment out when working locally // uncomment when pushing to heroku VVV
 
-# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
 # ^^^ connection with S3 // comment out when working locally // uncomment when pushing to heroku ^^^
 
