@@ -89,7 +89,8 @@ WSGI_APPLICATION = 'stickers.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 if "DATABASE_URL" in os.environ:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 else:
     print("Database URL not found. Using SQLite instead")
     DATABASES = {
@@ -105,16 +106,20 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -140,29 +145,29 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-# vvv connection with S3 // comment out when working locally // uncomment when pushing to heroku VVV
+# vvv connection with S3
 
-AWS_S3_OBJECT_PARAMETERS = {
-    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-    'CacheControl': 'max-age=94608000'
-}
+# AWS_S3_OBJECT_PARAMETERS = {
+#     'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+#     'CacheControl': 'max-age=94608000'
+# }
 
-AWS_STORAGE_BUCKET_NAME = 'pj-stickers'
-AWS_S3_REGION_NAME = 'eu-west-1'
-AWS_ACCESS_KEY_ID = os.environ.get("AWS_SECRET_KEY_ID")
-AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
+# AWS_STORAGE_BUCKET_NAME = 'pj-stickers'
+# AWS_S3_REGION_NAME = 'eu-west-1'
+# AWS_ACCESS_KEY_ID = os.environ.get("AWS_SECRET_KEY_ID")
+# AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-# ^^^ connection with S3 // comment out when working locally // uncomment when pushing to heroku ^^^
+# ^^^ connection with S3
 
 STATICFILES_LOCATION = 'static'
 
-# vvv connection with S3 // comment out when working locally // uncomment when pushing to heroku VVV
+# vvv connection with S3
 
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+# STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
-# ^^^ connection with S3 // comment out when working locally // uncomment when pushing to heroku ^^^
+# ^^^ connection with S3
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
@@ -174,11 +179,11 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# vvv connection with S3 // comment out when working locally // uncomment when pushing to heroku VVV
+# vvv connection with S3
 
-MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 
-# ^^^ connection with S3 // comment out when working locally // uncomment when pushing to heroku ^^^
+# ^^^ connection with S3
 
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET')

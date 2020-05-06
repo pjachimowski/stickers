@@ -148,20 +148,26 @@ When user is already legged in then here he/she will see the log out button.
 
 # TESTING Write up
 ...........................................................................................
-### forms
+### Forms
 - all the form have validation features. all forms passed testing. 
 ! card with products should accept only numbers. However, they do accept letter 'e'. This error has to be fixed later. 
-### buttons
+### Buttons
 - all the buttons are linked correctly and fire up successfully 
-### payment 
+### Payment 
 - test payment with stripe technology was performed successfully 
-### email 
+### Email 
 - email sent via REVIEW form as well as REQUEST form
 - emails were received in correct form and without errors
 ### Travis 
 - Travis used for automatic validation on deployed site
 ### Responsivenes
 - site terted in google chrome developer tools as well as on desktop and mobile versions. All elements are responsive, the layout does not breat, elements are not overlaping. 
+### Code validation
+- Python Code tested with PEP8. Python code adheres to PEP8 standards. (http://pep8online.com/checkresult)
+    exception being E501 "line is too long"
+- HTML code tested with online validator. (https://www.freeformatter.com/html-validator.html)
+- CSS code tested with online validator (http://csslint.net/)
+    exception being "Using width with padding can sometimes make elements larger than you expect."
 
 
 # DEPLOYMENT Write up

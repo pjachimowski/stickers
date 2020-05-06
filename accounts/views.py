@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
 from .forms import UserLoginForm, UserRegistrationForm
-from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 
 
@@ -35,7 +34,8 @@ def login(request):
                 else:
                     return redirect(reverse('index'))
             else:
-                user_form.add_error(None, "Your username or password are incorrect")
+                user_form.add_error(
+                    None, "Your username or password are incorrect")
     else:
         user_form = UserLoginForm()
     args = {'user_form': user_form, 'next': request.GET.get('next', '')}
@@ -60,7 +60,8 @@ def register(request):
 
             if user:
                 auth.login(request, user)
-                messages.success(request, "You have successfully registered. Add promo code to your first request for 10 eur welcome discount. PROMO CODE: WELCOME")
+                messages.success(
+                    request, "You have successfully registered. Add promo code to your first request for 10 eur welcome discount. PROMO CODE: WELCOME")
                 return redirect(reverse('index'))
 
             else:
@@ -74,5 +75,6 @@ def register(request):
 
 def review_sent(request):
     """A view that displays message after sending a review"""
-    messages.success(request, 'Your review was sent. Thank you for helping us to improve our service.')
+    messages.success(
+        request, 'Your review was sent. Thank you for helping us to improve our service.')
     return redirect(reverse('profile'))
