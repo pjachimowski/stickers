@@ -145,6 +145,25 @@
   text-decoration: none;
 }
 
+.btn-5-cart {
+    height: 40px;
+    width: 90px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+    transition: 0.3s;
+}
+.btn-5-cart:hover {
+  color: rgb(175, 0, 175);
+  border: 1px solid rgb(175, 0, 175);
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
 .btn-6 {
     background-color: rgb(175, 0, 175);
 }
@@ -320,6 +339,18 @@
 }
 /* -------------------- cart-----------------*/
 
+.cart-info {
+    margin: 15px 5px 55px 5px;
+}
+
+.total-value {
+    color: white;
+    font-size: xx-large;
+    padding: 10px;
+    display: inline;
+    margin: 15px 15px;
+}
+
 .item-name-cart {
     margin: 5px 5px 5px 15px;
 }
@@ -342,7 +373,11 @@
 }
 
 .hr-cart {
-    margin: 5px;
+    margin: 5px 0px;
+}
+
+.hr-cart-total {
+    margin: 85px 0 10px 0;
 }
 
 .img-cart {
@@ -355,17 +390,14 @@
     margin: 80px 0;
 }
 
-.input-group-addon {
-    background-color: rgb(175, 0, 175);
+.input-style {
+    margin-top: 5px;
 }
 
-.purple-frame {
-    border: solid 1px rgb(175, 0, 175);
-    border-radius: 5px;
-    padding: 10px;
-    display: inline;
-    margin: 10px 15px;
+.input-group-addon {
+    background-color: rgb(175, 0, 175); 
 }
+
 
 /*----------------- layout ---------*/
 
