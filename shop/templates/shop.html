@@ -12,7 +12,9 @@
             </form>
         </fieldset>
 	</div>
+    
 	<div class="row row-flex ">
+    
     <!-- PRODUCT: each item (sticker) is displayed in a form of card. Each card consist of: Image of the item, price, title, description and the window where user can fill the number of items he/she want to add to the cart.-->
 		{% for product in products %}
 		<div class="col-xs-12 col-sm-offset-0 col-sm-6 col-md-3 display panel panel-default">
@@ -35,6 +37,9 @@
 			</div>
 		</div>
 		{% endfor %}
+        
+        <hr>
 	</div>
+    
 </div>
 {% endblock %}

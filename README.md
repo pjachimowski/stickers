@@ -2,6 +2,7 @@
 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
 
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com//pjachimowski/stickers)
 # PJ - Stickers
 ...........................................................................................
 PJ - Stickers in an e-commerce website selling eco - friendly stickers. 
@@ -15,7 +16,7 @@ User can register to Partal, creating profile.
 ...........................................................................................
 ## color scheme
 - Main body uses generated css gradient (via https://www.ccbg.io/)
-PURPLE, PINK, BAVY
+PURPLE, PINK, NAVY
 There colors are meant to create positive, fun, and modern look (a reminder of other visual apps like instagram) 
 
 - Main buttons and call to action buttons:
@@ -172,13 +173,23 @@ When user is already legged in then here he/she will see the log out button.
 
 # DEPLOYMENT Write up
 ...........................................................................................
-## GitHub
-- application pushed to github:
+My project was developed using GitPod IDE, committed to git and pushed to GitHub. Finally the code was wired up with AWS S3 where dynamic media content of shop products are stored. The following steps where taken to deploy my project.
+### From GitHub
+- Logged into GitHub.
+- Selected repository from the GitHub dashboard.
+- Clicked on "Open in GitPod button"
+- From gitpod I accessed the page via terminal coment "python3 manage.py runserver"
+### From Heroku
+- Logged into Heroku
+- Opened the pj-stickers project 
+- In Deploy panel I clicked Deploy branch
+- After the page is deployed I opened the app vie "Open App" button
+
+Website is now deployed and is available here:
+https://pj-stickers.herokuapp.com/
+My repository can be found here:
 https://github.com/pjachimowski/stickers
-## GitPod
-- application written in an online IDE for GitHub and GitLab that launches ready-to-code dev environments
-## Heroku
-- application deployed to Heroku cloud platform
+
 ## AWS s3
 - Media stored in AWS S3 bucket 
 - Static files and CSS sored in the project on Heroku
